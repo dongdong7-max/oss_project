@@ -1,0 +1,71 @@
+<html>
+<head>
+    <body>
+        안녕하세요! <br />
+        2025 oss 수업에 참여한 김하준입니다.
+
+        <div attribute name="값입니다.">
+        div태그입니다.
+    </div>
+    <h1>h1 태그입니다.</h1>
+    <h2>h2 태그입니다.</h2>
+    <h3>h3 태그입니다.</h3>
+
+    1. 목록을 표기하고 싶을때! ol 혹은 ul을 사용
+    점 태그로만 내용 표시
+    <ul>
+        <li>순내용</li>
+        <li>순내용</li>
+        <li>순내용</li>
+    </ul>
+    2. 내용에 순서를 부여
+    <ol>
+        <li>순내용</li>
+        <li>순내용</li>
+        <li>순내용</li>
+    </ol>
+
+    3. 페이지 이동을 원할 때!
+    <a href="https://www.daum.net">이것을 누르면 이동합니다.</a> <!--속성으로 버튼을 누르면 페이지를 이동할 수 있도록 한다.-->
+
+    4. css 관련 <br />
+    1) id(동일 페이지 안에서 id는 유니크해야함.), class(동일해도 됨.) 선언해보기 <br />
+    <div id="div_01" class="div_normal">1아이디랑 클래스?!</div>
+    <div id="div_02" class="div_normal">2아이디랑 클래스?!</div>
+    
+    2) 직접 설정하기 <br />
+    <div style="background-color: aquamarine;">스타일입니다..</div>
+
+    3) 1개 혹은 여러 개도 적용 가능하도록!
+    <style><!--#은 아이디를 지정해서 속성을 지정하는 것 / .div으로 시작하는 것은 클래스 단위로 서식하는 것-->
+        #div_01{ 
+            background-color: bisque;
+        }
+        .div_normal{
+            font-size: 50px;
+        }
+    </style>
+
+    <br />
+    5. 보더, 패딩 마진 <!--margin을 시계방향으로 각각 부여할 수 있다.-->
+    <div style="background-color: aqua; margin: 20px 40px 60px 80px; padding: 10px; border: 5px solid darkblue;">보더패팅마진 각각 설정해보기</div>
+    
+    실습예제 1.
+    <!--아이디가 보더 테스트인 div를 선언하고 해당 아이디를 가진 태그에 보더 마진 패딩 부여하기-->
+    <div id="div_04">실습예제용 id</div>
+    <style>
+        #div_04{
+            background-color: blueviolet;
+            margin: 20px 40px 60px 80px;
+            border: 5px 10px 15px 20px;
+            padding: 10px 20px 30px 40px;
+            text-align: center;
+            font-size: 50px;
+            font-weight: 500;
+        }
+        
+    </style>
+    </body>
+    
+</head>
+</html>
