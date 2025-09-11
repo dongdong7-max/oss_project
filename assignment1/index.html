@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment1: 20250911</title>
+</head>
+<style>
+    .div_left{
+        float: left;
+        width: 150px; 
+        padding: 5px 0; 
+        border: 2px solid black; 
+        border-radius: 3px; 
+        
+    }
+    .div_left.normal{
+        background-color: gold;
+    }
+    .div_left.active{
+        background-color: green;
+    }
+</style>
+<body>
+    <div style="background-color: green; padding: 5px; color: white; font-size: 50px; font-weight: bold;">Welcome to My Homepage</div>
+    <div style="background-color: green; padding: 5px; color:white; font-size: 25px;">Use the menu to select different Stylesheets</div>
+    <div style="float: left;"></div>
+        <div class="div_left active">Sheetstyle</div>
+        <div class="div_left normal">Sheetstyle</div>
+        <div class="div_left normal">Sheetstyle</div>
+    
+    <!--왼쪽2-->
+    <div style="width: 100px;">left2
+        <h3>Same Page Different Stylesheets</h3>
+        <div>This is a demonstration of how different stylesheets can change the layout of your HTML page. You can change the layout of this page by selecting different stylesheets in the menu, or by selecting one of the following links:
+            Stylesheet1, Stylesheet2, Stylesheet3, Stylesheet4.
+        </div>
+    </div>
+    
+    <!--오른쪽-->
+    <div style="float: right;">right
+        <h4>Side-Bar</h4>
+        <div>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+    </div>
+</body>
+
+</html>
