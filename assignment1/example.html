@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Footer 예제</title>
+    <style>
+        /* 기본 스타일 초기화 */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            /* 1. body를 Flex 컨테이너로 만듭니다. */
+            display: flex;
+            flex-direction: column; /* 2. 자식 요소들을 세로로 정렬합니다. */
+            min-height: 100vh; /* 뷰포트(화면) 전체 높이를 최소 높이로 설정 */
+            font-family: sans-serif;
+        }
+
+        .main-content {
+            /* 3. 이 요소가 남는 공간을 모두 차지하도록 만듭니다. */
+            flex: 1; 
+            padding: 2em;
+        }
+
+        .footer {
+            background-color: #f2f2f2;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="main-content">
+        <h1>Sticky footer</h1>
+        <p>Pin a footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS.</p>
+        <p>Use <a href="#">the sticky footer with a fixed navbar</a> if need be, too.</p>
+        
+        </main>
+
+    <footer class="footer">
+        이곳이 바로 스티키 푸터(Sticky Footer)입니다.
+    </footer>
+
+</body>
+</html>
