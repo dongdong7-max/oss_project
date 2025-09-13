@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week assignment#1</title>
+  </head>
+  <style>
+    body {
+      background-color: black;
+    }
+    .div_top{
+        color: greenyellow;
+        margin: 20px 5px 0px 25px;
+    }
+    .div_top h2{
+        margin: 0px;       
+    }
+    .div_main{
+        display: flex;
+        color: greenyellow;
+        font-weight: lighter;
+        font-size: 15px;
+        letter-spacing: 2px;
+        justify-content: space-between;
+    }
+    .div_left{
+        margin: 28px
+    }
+    .div_left ul li{
+        margin-bottom: 4px;
+    }
+
+    .div_left ul li.active{
+      color: white;
+    }
+    .div_middle{
+        color: greenyellow;
+        margin-left: 25px;
+        font-weight: lighter;
+        font-size: 15px;
+        letter-spacing: 2px;
+    }
+    .div_middle a{
+        color: white;
+    }
+
+    .div_right{
+      font-size: smaller;
+      width: 350px;
+      height: 180px;
+        color: white;
+        border-radius: 5px;
+        border: 1px solid white;
+
+    }
+    .div_bottom{
+        color: white;
+        font-size: 11px;
+        font-weight: lighter;
+        justify-content: space-between;
+        text-align: center;
+        margin-top: 15px;
+        padding: 10px;
+        border-radius: 3px;
+        border: 1px solid white;
+    }
+  </style>
+  <body>
+    <!--class: top-->
+    <div class="div_top">
+      <h2>Welcome to 김하준's Homepage (22200217)</h2>
+      <div style="font-weight: lighter;">Use the menu to select different Stylesheets</div>
+    </div>
+    <!-- class: div_main-->
+    <div class="div_main">
+      <!--class: div_left-->
+      <div class="div_left">
+        <ul>
+          <li>Stylesheet 1</li>
+          <li>Stylesheet 2</li>
+          <li>Stylesheet 3</li>
+          <li class="active">Stylesheet 4</li>
+          <li>No Stylesheet</li>
+        </ul>
+      </div>
+
+      <!--class: div_right-->
+      <div class="div_right">
+        <h4 style="padding-left: 10px;">Side-Bar</h4>
+        <div style="padding: 10px;">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+        </div>
+      </div>
+    </div>
+      
+    <!--class: div_middle-->
+      <div class="div_middle">
+        <!--헤딩: same page. 링크 수정하기. 마지막 링크와 온점 차이 수정하기.-->
+        <h2>Same Page Different Stylesheets</h2>
+        <div>This is a demonstration of how different stylesheets can change the layout of your HTML page. You can change the layout of this page by selecting different stylesheets in the menu, or by selecting one of the following links:</div>
+        <a href="https://www.daum.net">Stylesheet1,</a>
+        <a href="https://www.daum.net">Stylesheet2,</a>
+        <a href="https://www.daum.net">Stylesheet3,</a>
+        <a href="https://www.daum.net">Stylesheet4.</a>
+        <!--헤딩: No Styles. 링크 수정하기. 마지막 링크와 온점 차이 수정하기.-->
+        <h3>No Styles</h3>
+        <div>This page uses DIV elements to group different sections of the HTML page. Click here to see how the page looks like with no stylesheet:</div>
+        <a href="https://www.daum.net">No Stylesheet.</a>
+      </div>
+    <!--class: div_bottom-->
+    <div class="div_bottom">
+      <div>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+      <div>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week assignment#1</title>
+</head>
+
+<!--각 클래스에 대한 스타일-->
+<style>
+.div_top{
+    color: white;
+    background-color: rgba(13, 150, 13, 0.737);
+    border-radius: 5px;
+    padding:15px 10px;
+    margin: 5px 15px;
+}
+
+.div_top h2{
+    margin: 0px;
+}
+
+.div_maincontent{
+    display: flex;
+    margin: 0 15px;
+}
+
+ul{
+    list-style: none;
+    padding: 0px;
+}
+
+.div_left ul li{
+    list-style: none;
+    width: 200px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: lightgray;
+    margin-bottom: 5px;
+}
+
+.div_left ul li.active{
+    background-color: rgba(13, 150, 13, 0.737);
+}
+
+.div_center{
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+.div_right{
+    margin: 10px 0px 10px 10px;
+    padding-top: 0px;
+    padding: 0 5px;
+    flex: 0 0 30px;
+    background-color: skyblue;
+    color: white;
+    border-radius: 5px;
+}
+
+.div_right h4{
+    margin-top: 0px;
+}
+
+.div_bottom {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: gainsboro;
+}
+</style>
+
+<body>
+    <!--클래스: div_top. 헤딩: 웰 컴 투 하준. -->
+    <div class="div_top"><!--클래스 div 하나에 묶어야 두 텍스트가 분리되지 않는다.-->
+        <h2 >Welcome to 김하준's Homepage (22200217)</h2>
+        <div>Use the menu to select different Stylesheets</div>
+    </div>
+
+    <!--div_maincontent-->
+    <div class="div_maincontent">
+            <!--클래스: div_left-->
+        <div class="div_left">
+            <ul>
+                <li class="active">Stylesheet 1</li>
+                <li>Stylesheet 2</li>
+                <li>Stylesheet 3</li>
+                <li>Stylesheet 4</li>
+                <li>No Stylesheet</li>
+            </ul>
+        </div>
+        
+        <!--클래스: div_center. 헤딩: same page. 링크 수정하기. 마지막 링크와 온점 차이 수정하기.-->
+        <div class="div_center">
+            <h2>Same Page Different Stylesheets</h2>
+            <div>This is a demonstration of how different stylesheets can change the layout of your HTML page. You can change the layout of this page by selecting different stylesheets in the menu, or by selecting one of the following links:</div>
+                <a href="https://www.daum.net">Stylesheet1,</a>
+                <a href="https://www.daum.net">Stylesheet2,</a>
+                <a href="https://www.daum.net">Stylesheet3,</a>
+                <a href="https://www.daum.net">Stylesheet4.</a>
+
+            <!--클래스: div_center. 헤딩: No Styles. 링크 수정하기. 마지막 링크와 온점 차이 수정하기.-->
+
+                <h3>No Styles</h3>
+            <div>This page uses DIV elements to group different sections of the HTML page. Click here to see how the page looks like with no stylesheet:</div>
+            <a href="https://www.daum.net">No Stylesheet.</a>
+        </div>
+
+        <div class="div_right">
+            <h4>Side-Bar</h4>
+            <div>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+        </div>
+    </div>
+
+    <!--class: div_bottom. 헤딩: 사이드 바.-->
+    <div class="div_bottom">
+        <div>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</div>
+        <div>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</div>
+    <div>
+</body>
+</html>
