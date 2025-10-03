@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="my.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">My Reading Log</a>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h2>Book Details</h2>
+        <div class="card mt-4">
+            <div class="card-body">
+                <div class="row mb-3">
+                    <div class="col-sm-3 fw-bold">Title</div>
+                    <div class="col-sm-9" id="book-title"></div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-sm-3 fw-bold">Author</div>
+                    <div class="col-sm-9" id="book-author"></div>
+            
+                </div>
+                <div class="row mb-3">
+                    <div class="col-sm-3 fw-bold">Rating</div>
+                    <div class="col-sm-9" id="book-rating"></div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-sm-3 fw-bold">Start Date</div>
+                    <div class="col-sm-9" id="start-date"></div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-sm-3 fw-bold">End Date</div>
+                    <div class="col-sm-9" id="end-date"></div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-sm-3 fw-bold">Status</div>
+                    <div class="col-sm-9" id="book-status"></div>
+                </div>
+
+                
+            </div>
+
+        </div>
+        <div class="text-end mt-4">
+            <a href="#" id="edit-button" class="btn btn-primary">Edit</a>
+            <button class="btn btn-danger" onclick="confirmDelete()">Delete</button>
+            <a href="index.html" class="btn btn-secondary">Back to List</a>
+        </div>
+    </div>
+
+    <script>
+        const bookData = [
+            {id: 1, title: 'The Midnight Library', author: 'Matt Haig', rating: '*****', start: "2025-09-10", end:"2025-09-15", status:'<span class="badge bg-success">Completed</span>'},
+            {id: 2, title: 'Project Hail Mary', author: 'Andy Weir', rating: '*****', start: "2025-09-15", end:"2025-09-16", status:'<span class="badge bg-success">Completed</span>'},
+            {id: 3, title: 'Dune', author: 'Frank Herbert', rating: '*****', start: "not yet", end:"not yet", status:'<span class="badge bg-success">Want to Read</span>'},
+            {id: 4, title: 'The Infinite Mage', author: 'Chiwoo Kim', rating: '*****', start: "not yet", end:"not yet", status:'<span class="badge bg-success">Want to Read</span>'},
+            {id: 5, title: 'The Name of the Rose', author: 'Umberto Ecot', rating: '*****', start: "not yet", end:"not yet", status:'<span class="badge bg-success">Want to Read</span>'},
+            {id: 6, title: 'Fahrenheit', author: 'Ray Bradbury', rating: '*****', start: "not yet", end:"not yet", status:'<span class="badge bg-success">Want to Read</span>'},
+            {id: 7, title: 'The Great Divorce', author: 'C.S Lewis', rating: '*****', start: "not yet", end:"not yet", status:'<span class="badge bg-success">Want to Read</span>'},
+            {id: 8, title: 'Brave New World', author: 'Aldous Huxley', rating: '*****', start: "not yet", end:"not yet", status:'<span class="badge bg-success">Want to Read</span>'},
+            {id: 9, title: 'Frankenstein<', author: 'Mary Shelley', rating: '*****', start: "not yet", end:"not yet", status:'<span class="badge bg-success">Want to Read</span>'},
+            {id: 10, title: 'East of Eden', author: 'John Steinbeckt', rating: '*****', start: "not yet", end:"not yet", status:'<span class="badge bg-success">Want to Read</span>'},
+
+
+        ]
+
+        window.onload = function(){
+            const params = new URLSearchParams(window.location.search);
+            const bookID = parseInt(params.get('id'));
+
+            const book = bookData.find(b => b.id === bookID);
+
+            if (book){
+                document.getElementById('book-title').textContent = book.title;
+                document.getElementById('book-author').textContent = book.author;
+                document.getElementById('book-rating').textContent = book.rating;
+                document.getElementById('start-date').textContent = book.start;
+                document.getElementById('end-date').textContent = book.end;
+                document.getElementById('book-status').innerHTML = book.status;
+                document.getElementById('edit-button').href = `edit.html?id=${book.id}`;
+    
+            } else{
+                document.getElementById('book-title').textContent = 'Book not found!';
+            }
+        };
+
+        function confirmDelete(){
+            if (confirm("You want to delete")) { // confirm 사용
+                alert("deleted!");
+                window.location.href = "index.html";
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>

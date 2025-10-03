@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Log Edit</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="my.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">My Reading Log</a>
+        </div>
+    </nav>
+    
+    <div class="container mt-5">
+        <h2>Book Log Edit</h2>
+        <div class="card p-4 mt-4">
+            <form onsubmit="return submitEditForm()">
+                <div class="mb-3">
+                    <label for="bookTitle" class="form-label">Book Title</label>
+                    <input type="text" class="form-control" id="bookTitle" required>
+                </div>
+                <div class="mb-3">
+                    <label for="bookAuthor" class="form-label">Book Author</label>
+                    <input type="text" class="form-control" id="bookAuthor" required>
+                </div>
+                <div class="mb-3">
+                    <label for="bookRating" class="form-label">Book Rating</label>
+                    <input type="text" class="form-control" id="bookRating" required>
+                </div>
+                <div class="mb-3">
+                    <label for="startDate" class="form-label">Start Date</label>
+                    <input type="text" class="form-control" id="startDate" required>
+                </div>
+                <div class="mb-3">
+                    <label for="endDate" class="form-label">End Date</label>
+                    <input type="text" class="form-control" id="endDate" required>
+                </div>
+                <div class="mb-3">
+                    <label for="status" class="form-label">Status</label>
+                    <select class="form-select" id="bookStatus" required>
+                        <option value="Completed">Completed</option>
+                        <option value="Want to Read">Want to Read</option>
+                    </select>
+                </div>
+
+                <div class="text-end">
+                    <a href="index.html" class="btn btn-secondary">cancel</a>
+                    <button type="submit" class="btn btn-primary">edit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+   
+    <script>
+
+        const bookData = [
+            {id: 1, title: 'The Midnight Library', author: 'Matt Haig', rating: '*****', start: "2025-09-10", end:"2025-09-15", status:'Completed'},
+            {id: 2, title: 'Project Hail Mary', author: 'Andy Weir', rating: '*****', start: "2025-09-15", end:"2025-09-16", status:'Completed'},
+            {id: 3, title: 'Dune', author: 'Frank Herbert', rating: '*****', start: "not yet", end:"not yet", status:'Want to Read'},
+            {id: 4, title: 'The Infinite Mage', author: 'Chiwoo Kim', rating: '*****', start: "not yet", end:"not yet", status:'Want to Read'},
+            {id: 5, title: 'The Name of the Rose', author: 'Umberto Ecot', rating: '*****', start: "not yet", end:"not yet", status:'Want to Read'},
+            {id: 6, title: 'Fahrenheit', author: 'Ray Bradbury', rating: '*****', start: "not yet", end:"not yet", status:'Want to Read'},
+            {id: 7, title: 'The Great Divorce', author: 'C.S Lewis', rating: '*****', start: "not yet", end:"not yet", status:'Want to Read'},
+            {id: 8, title: 'Brave New World', author: 'Aldous Huxley', rating: '*****', start: "not yet", end:"not yet", status:'Want to Read'},
+            {id: 9, title: 'Frankenstein<', author: 'Mary Shelley', rating: '*****', start: "not yet", end:"not yet", status:'Want to Read'},
+            {id: 10, title: 'East of Eden', author: 'John Steinbeckt', rating: '*****', start: "not yet", end:"not yet", status:'Want to Read'},
+
+
+        ]
+
+        window.onload = function(){
+            const params = new URLSearchParams(window.location.search);
+            const bookID = parseInt(params.get('id'));
+
+            const book = bookData.find(b => b.id === bookID);
+
+            if (book){
+                document.getElementById('bookTitle').value = book.title;
+                document.getElementById('bookAuthor').value = book.author;
+                document.getElementById('bookRating').value = book.rating;
+                document.getElementById('startDate').value = book.start;
+                document.getElementById('endDate').value = book.end;
+                document.getElementById('bookStatus').value = book.status;
+            
+
+            } else{
+                document.getElementById('book-title').value = 'Book not found!';
+            }
+        };
+
+        function submitEditForm() {
+            const title = document.getElementById('bookTitle').value;
+            const author = document.getElementById('bookAuthor').value;
+            const rating = document.getElementById('bookRating').value;
+            const start = document.getElementById('startDate').value;
+            const end = document.getElementById('endDate').value;
+            const status = document.getElementById('bookStatus').value;
+
+            if (title.trim() === ""){
+                alert("Book Title is required.");
+                return false;
+            }
+            if (author.trim() === ""){
+                alert("Author is required.");
+                return false;
+            }
+            if (rating && (rating < 1 || rating > 5)){
+                alert("Rating must be between 1 and 5");
+                return false;
+            }
+            if (start.trim() === ""){
+                alert("Start date is required");
+                return false;
+            }
+
+            if (confirm("You want to edit?")) { // confirm 사용
+                alert("edited!");
+                window.location.href = "index.html";
+            }
+            return false;
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
